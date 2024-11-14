@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Compliance Report Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Compliance Report Generator</h1>
+    <form action="{{ url_for('upload_files') }}" method="post" enctype="multipart/form-data">
+        <input type="file" name="images" multiple>
+        <button type="submit">Upload Images</button>
+    </form>
+    <br>
+    <a href="{{ url_for('generate_report') }}">Generate Compliance Report</a>
+    <p>{{ get_flashed_messages()[0] if get_flashed_messages() else "" }}</p>
+</body>
+</html>
