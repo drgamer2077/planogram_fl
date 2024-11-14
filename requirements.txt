@@ -1,0 +1,7 @@
+streamlit
+roboflow
+numpy
+pandas
+openpyxl
+flask
+schedule
